@@ -1,12 +1,13 @@
 "use client";
-import React from 'react'
+import React, { useEffect } from 'react'
 import {useState} from "react";
 
 const Hero = () => {
 
     const [num1, setNum1] = useState<number | string>("");
     const [num2, setNum2] = useState<number | string>("");
-    const [result, setResult] = useState(-1);
+    const [operator, setOperator] = useState<string>("");
+    const [result, setResult] = useState<number | string>("");
 
     const operators = [
         "+",
@@ -15,12 +16,29 @@ const Hero = () => {
         "/"
     ]
 
-    const calculate = 
+    useEffect(()=>{
+        if(!operator){
+            setResult("");
+        }
+        else if(operator === "+"){
+            setResult(Number(num1) + Number(num2));
+        }
+        else if(operator === "-"){
+            setResult(Number(num1) - Number(num2));
+        }
+        else if(operator === "*"){
+            setResult(Number(num1) * Number(num2));
+        }
+        else if(operator === "/"){
+            setResult(Number(num1) / Number(num2));
+        }
+    },[num1, num2, operator])
 
     const test = () => {
         console.log('test');
         console.log(num1);
         console.log(num2);
+        console.log(operator);
     }
 
   return (
@@ -34,20 +52,24 @@ const Hero = () => {
         {/*maths tools*/}
         <div>
             {operators.map((operator, index)=>(
-                <button key={index} className='bg-blue-500 hover:bg-black w-10 text-white p-2 rounded-lg m-2'>{operator}</button>
+                <button onClick={()=>setOperator(operator)} key={index} className='bg-blue-500 hover:bg-black w-10 text-white p-2 rounded-lg m-2'>{operator}</button>
             ))}
         </div>
 
         {/*result*/}
         <div className='w-full px-20'>
             {result
-            ?<div className='bg-green-200 w-full h-20 rounded-xl flex justify-center items-center'>yes</div>
-            :<div>no</div>}
+            ?<div className='bg-green-200 w-full h-20 rounded-xl flex justify-center items-center'>
+                {num1}{operator}{num2}={result}
+            </div>
+            :<div></div>}
         </div>
 
-
+ 
         {/*test button*/}
+        {/*
         <button className='bg-blue-500 text-white p-2 rounded-lg' onClick={test}>Test</button>
+        */}
     </div>
   )
 }
