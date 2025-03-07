@@ -57,9 +57,9 @@ const Hero = () => {
         </div>
 
         {/*result*/}
-        <div className='w-full px-20'>
+        <div className='w-full mt-10 flex justify-center items-center px-20'>
             {result
-            ?<div className='bg-green-200 w-full h-20 rounded-xl flex justify-center items-center'>
+            ?<div className='bg-green-200 w-100 h-20 rounded-xl flex justify-center items-center'>
                 <h1 className='font-semibold mr-4'>Answer :</h1>  
                 {num1}{operator}{num2}={result}
             </div>
