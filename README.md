@@ -12,9 +12,15 @@ docker build -t image-name .
 docker run --name container-name image-name
 
 ## port forwarding to run on desktop
+
+#This will create a new container
 docker run -p Destination-PORT:Source-PORT image-name
+#Destination port is host port and Source port is container port
 docker run -p 3001:3000 image-name
 
+#if want a docker container with specific name with port forwaring
+docker run -d -p Host-PORT:Container-PORT --name Container-Name Image-Name
+docker run -d -p 3001:3000 --name Container-Name Image-Name
 
 
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
