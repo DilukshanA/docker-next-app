@@ -1,3 +1,18 @@
+## Dockerize 
+
+```bash
+## create docker image 
+docker build -t image-name .
+
+## create docker container from created image
+docker run --name container-name image-name
+
+## port forwarding to run on desktop
+docker run -p Destination-PORT:Source-PORT image-name
+docker run -p 3001:3000 image-name
+
+
+
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
 ## Getting Started
