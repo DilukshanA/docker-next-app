@@ -22,6 +22,15 @@ docker run -p 3001:3000 image-name
 docker run -d -p Host-PORT:Container-PORT --name Container-Name Image-Name
 docker run -d -p 3001:3000 --name Container-Name Image-Name
 
+# if want to show the running containers
+docker ps
+
+# if want the stop server
+docker stop Container-Name
+
+#if want again run server
+docekr start Conatainer-Name
+
 
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
