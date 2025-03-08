@@ -1,5 +1,9 @@
 ## Dockerize 
 
+create docker file name as Dockerfile without any extention
+
+create .dockerignore
+
 ```bash
 ## create docker image 
 docker build -t image-name .
