@@ -1,7 +1,7 @@
 ## Dockerize 
 
 ```bash
-# Read full instruction on Medium
+# Read full instruction my article on Medium.com
 
 https://medium.com/@dadilukshan/dockerizing-a-next-js-app-287df951ad9a
 
