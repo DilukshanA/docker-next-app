@@ -34,6 +34,7 @@ const Hero = () => {
         }
     },[num1, num2, operator])
 
+    {/* test function */}
     const test = () => {
         console.log('test');
         console.log(num1);
