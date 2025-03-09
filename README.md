@@ -1,5 +1,11 @@
 ## Dockerize 
 
+```bash
+# Read full instruction on Medium
+
+https://medium.com/@dadilukshan/dockerizing-a-next-js-app-287df951ad9a
+
+```
 create docker file name as Dockerfile without any extention
 
 create .dockerignore
